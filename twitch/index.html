@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+    rel="stylesheet">
+  <!-- end:fonts -->
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="app-wrapper">
+    <!--  -->
+    <!-- start::header -->
+    <!--  -->
+    <header class="app-header">
+      <!--  -->
+      <div style="display: flex; gap: .5rem; align-items: center;">
+        <div style="height: 30px; width: 30px; background-color: rgb(122, 121, 121); border-radius: 4px;">
+
+        </div>
+        <div style="display: flex; align-items: center; gap: .5rem">
+          <a class="link-app" href="">Following</a>
+          <a class="link-app" href="">Browser</a>
+          <a class="link-app" href="">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!--  -->
+
+      <!--  -->
+      <div>
+        <div class="input-group-search">
+          <input placeholder="Buscar canales" type="text">
+          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+            stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+      </div>
+      <!--  -->
+
+      <!--  -->
+      <div style="display: flex; align-items: center; gap: .7rem">
+        <button class="button-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M4.02381 3.78307C4.12549 3.32553 4.5313 3 5 3H19C19.4687 3 19.8745 3.32553 19.9762 3.78307L21.9762 12.7831C21.992 12.8543 22 12.927 22 13V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V13C2 12.927 2.00799 12.8543 2.02381 12.7831L4.02381 3.78307ZM5.80217 5L4.24662 12H9C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12H19.7534L18.1978 5H5.80217ZM16.584 14C15.8124 15.7659 14.0503 17 12 17C9.94968 17 8.1876 15.7659 7.41604 14H4V19H20V14H16.584Z">
+            </path>
+          </svg>
+        </button>
+
+        <button class="button-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny"
+            viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18 7c.542 0 1 .458 1 1v7c0 .542-.458 1-1 1h-8.829l-.171.171v-.171h-3c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12m0-2h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3h1v3l3-3h8c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3z">
+            </path>
+          </svg>
+        </button>
+
+        <div class="user-card">
+          <div class="user-card--avatar">
+
+          </div>
+        </div>
+      </div>
+      <!--  -->
+    </header>
+    <!--  -->
+    <!-- end::header -->
+    <!--  -->
+
+    <!--  -->
+    <!-- start::app-content -->
+    <!--  -->
+    <div class="app-content">
+
+      <!--  -->
+      <!-- start::aside channels -->
+      <!--  -->
+      <div class="app-aside scroll-style">
+
+        <!-- start:foryou -->
+        <section class="app-aside--foryou section">
+          <div style="display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0;">
+            <h2 class="app-aside-title">For you</h2>
+            <button class="button-icon">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path d="M17.59 18 19 16.59 14.42 12 19 7.41 17.59 6l-6 6z"></path>
+                <path d="m11 18 1.41-1.41L7.83 12l4.58-4.59L11 6l-6 6z"></path>
+              </svg>
+            </button>
+          </div>
+          <div id="f">
+
+          </div>
+        </section>
+        <!-- end:foryou -->
+
+        <!-- start:folowed -->
+        <section class="app-aside--folowed section">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 class="app-section-title">Folowed channels</h2>
+            <button class="button-icon primary">
+              <svg stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 16H4l6 6V2H8zm6-11v17h2V8h4l-6-6z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="list-section" id="followed-container"></div>
+          <div class="btn-link primary">Show more</div>
+        </section>
+        <!-- end:folowed -->
+
+        <!-- start:livechannels -->
+        <section class="app-aside--livechannels section">
+          <h2 class="app-section-title">Live channels</h2>
+          <div class="list-section" id="livechannels"></div>
+          <div class="btn-link primary">Show more</div>
+        </section>
+        <!-- end:livechannels -->
+
+      </div>
+      <!--  -->
+      <!-- end::aside channels -->
+      <!--  -->
+
+      <!--  -->
+      <!-- start::channel -->
+      <!--  -->
+      <div class="app-channel-container">
+        <!--  -->
+        <div style="height: auto; width: 100%; border-radius: 5px; overflow: hidden;">
+          <img style=" width: 100%;" src="https://www.servindi.org/sites/default/files/editor/imagenes/marco-aurelio-denegri.jpg" alt="">
+        </div>
+        <!--  -->
+
+        <!--  -->
+        <div class="channel-info">
+          <div>
+            <div class="channel-info--avatar"></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: .5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div class="channel-info--channelname">El Ruku</div>
+              <div style="display: flex; align-items: center; gap: .5rem">
+                <button class="btn-channel-action">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                </button>
+                <button class="btn-channel-action">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224 0c-17.7 0-32 14.3-32 32l0 19.2C119 66 64 130.6 64 208l0 25.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416l400 0c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4l0-25.4c0-77.4-55-142-128-156.8L256 32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112l0 25.4c0 47.9 13.9 94.6 39.7 134.6L72.3 368C98.1 328 112 281.3 112 233.4l0-25.4c0-61.9 50.1-112 112-112zm64 352l-64 0-64 0c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg>
+                </button>
+                <button class="btn-channel-action cta">
+                  Resubscribe
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path></svg>
+                </button>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <div class="channel-info--title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, perspiciatis.</div>
+              <div class="channel-info--countviewers">20.5255</div>
+            </div>
+            <div style="display: flex; gap: .5rem; align-items: center;">
+              <div>
+                <div class="channel-info--category">Categoría del canal</div>
+              </div>
+              <div style="display: flex; gap: .5rem;">
+                <div class="channel-info--tag">Juegos</div>
+                <div class="channel-info--tag">Diversion</div>
+                <div class="channel-info--tag">Quiero keke</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+
+        <!--  -->
+        <div class="channel-about">
+          <div class="channel-about--title">About Ruku</div>
+          <div class="channel-about--card">
+            <div style="display: flex; align-items: center; gap: .5rem;">
+              <div>18.5M</div>
+              followers
+            </div>
+            <div>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim ducimus illo vitae perferendis repellat. Est, natus consequatur. Quaerat, odit ipsum?
+            </div>
+          </div>
+        </div>
+        <!--  -->
+      </div>
+      <!--  -->
+      <!-- end::channel -->
+      <!--  -->
+
+      <!--  -->
+      <!-- start::chat  -->
+      <!--  -->
+      <div class="app-channel-chat">
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <section class="section app-channel-chat--header">
+          <button class="button-icon">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em"
+              width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z">
+              </path>
+            </svg>
+          </button>
+          <div class="app-aside-title">Stream chat</div>
+          <button class="button-icon">
+            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+              stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </button>
+        </section>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <section class="section app-channel-chat--metrics">
+          <div>
+            <div style="font-size: 11px; color: white;">
+              <img alt="Cheer 500" style="height: 14px; width: 14px" class="" src="https://d3aqoihi2n8ty8.cloudfront.net/actions/cheer/dark/static/100/1.png" srcset="https://d3aqoihi2n8ty8.cloudfront.net/actions/cheer/dark/static/100/1.png 1x">
+              Erick noseque
+            </div>
+          </div>
+          <div>
+            <div style="font-size: 11px; color: white;">
+              <img alt="Cheer 500" style="height: 14px; width: 14px" class="" src="https://d3aqoihi2n8ty8.cloudfront.net/actions/cheer/dark/static/100/1.png" srcset="https://d3aqoihi2n8ty8.cloudfront.net/actions/cheer/dark/static/100/1.png 1x">
+              Otro fulanito
+            </div>
+          </div>
+        </section>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <section class="section app-channel-chat--messages scroll-style" id="message-container">
+          
+        </section>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <section class="section app-channel-chat--messagescompose">
+          <div class="message-composer-wrapper">
+            <div class="message-composer-status">
+              Modo solo seguidores
+            </div>
+            <input placeholder="Envía tu mensaje" class="input-composer-message" type="text">
+          </div>
+          <div class="message-composer-footer">
+            <div style="display: flex; color: white; font-size: 12px; gap: .5rem;">
+              <div>50<img alt="Cheer 500" style="height: 14px; width: 14px" class="" src="https://d3aqoihi2n8ty8.cloudfront.net/actions/cheer/dark/static/100/1.png" srcset="https://d3aqoihi2n8ty8.cloudfront.net/actions/cheer/dark/static/100/1.png 1x"></div>
+              <div>50<img alt="Cheer 500" style="height: 14px; width: 14px" class="" src="https://d3aqoihi2n8ty8.cloudfront.net/actions/cheer/dark/static/100/1.png" srcset="https://d3aqoihi2n8ty8.cloudfront.net/actions/cheer/dark/static/100/1.png 1x"></div>
+            </div>
+            <div>
+              <button style="width: 55px;" class="btn-primary-send">
+                Send
+              </button>
+            </div>
+          </div>
+        </section>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+
+      </div>
+      <!--  -->
+      <!-- end::chat  -->
+      <!--  -->
+
+    </div>
+    <!--  -->
+    <!-- end::app-content -->
+    <!--  -->
+
+  </div>
+  <script src="./app.js"></script>
+
+</body>
+
+</html>

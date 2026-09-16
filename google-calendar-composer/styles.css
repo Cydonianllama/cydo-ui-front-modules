@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-calendar-cydo{
+  --bg-primary: rgb(97, 97, 97);
+  --bg-background: rgb(13, 13, 13);
+  --padding-x-section: 10px;
+  overflow: hidden;
+
+
+  --width-aside: 310px;
+}
+
+
+/* layout : container-calendar */
+
+.container-calendar{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: var(--bg-background);
+}
+
+.container-calendar .aside{
+  padding: 0 var(--padding-x-section) 0 var(--padding-x-section);
+  height: 100%;
+  width: var(--width-aside);
+  transition: width .28s cubic-bezier(.2, .8, .2, 1);
+}
+
+.container-calendar .content{
+  height: 100%;
+  flex: 1;
+}
+
+/* layout : container-calendar-create */
+
+.container-calendar-create{
+
+}
+
+.container-calendar-create .aside{
+
+}
+
+.container-calendar-create .content{
+
+}
+
+
+/* layout : container-calendar-edit */
+
+.container-calendar-edit{
+
+}
+
+.container-calendar-edit .content{
+
+}
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* UTILS */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+.btn-action {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 9px;
+  height: 45px;
+  background-color: var(--bg-primary);
+  color: white;
+  cursor: pointer;
+}
+
+.btn-action:hover{
+  background-color: gray;
+}
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* GM DIALOG STYLES */  
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+.gm-dialog{
+  position: absolute;
+  z-index: 10;
+  color: white;
+  border: 1px solid var(--dialog-border);
+  width: 310px;
+  border-radius: 9px;
+  background-color: var(--dialog-background);
+  /* Sin transición en left/top aquí: el drag libre debe ser instantáneo.
+     El snap animado vive solo en .is-coupled */
+  transition: width .28s cubic-bezier(.2, .8, .2, 1), height .28s cubic-bezier(.2, .8, .2, 1), outline-color .18s ease, box-shadow .18s ease;
+
+  --dialog-padding: 5px;
+  --dialog-background: rgb(27, 27, 27);
+  --dialog-border: rgb(60, 59, 59);
+
+  --height-dialog-content: 350px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.gm-dialog .dialog-header{
+  display: flex;
+  height: 30px;
+  border-bottom: 1px solid var(--dialog-border);
+}
+
+.gm-dialog .dialog-header:hover{ 
+  background-color: rgb(47, 47, 47);
+}
+
+.gm-dialog .dialog-header .dialog-header--leftsection{
+  cursor: pointer;
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gm-dialog .dialog-header .dialog-header--blank{
+  cursor: grab;
+  flex: 1;
+}
+
+.gm-dialog .dialog-content{
+  padding: var(--dialog-padding);
+  height: var(--height-dialog-content);
+  overflow: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.gm-dialog .dialog-footer{
+  height: 30px;
+  border-top: 1px solid var(--dialog-border);
+  padding: var(--dialog-padding);
+}
+
+/*  */
+/*  */
+/*  */
+/* GM PANELS */
+/*  */
+/*  */
+/*  */
+
+.gm-dialog.is-over-aside{
+  outline: 2px dashed #4d90fe;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(77, 144, 254, .25);
+}
+
+.gm-dialog.is-coupled{
+  /* flag de estado: sin outline persistente; el énfasis solo vive en dragover */
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  /* Snap animado solo en estado acoplado (el drag libre no tiene transición) */
+  transition: width .28s cubic-bezier(.2, .8, .2, 1), height .28s cubic-bezier(.2, .8, .2, 1), top .22s ease, left .22s ease, outline-color .18s ease, box-shadow .18s ease;
+  animation: gm-expand .28s cubic-bezier(.2, .8, .2, 1);
+}
+
+/* Acoplado: el contenido rellena el height total disponible */
+.gm-dialog.is-coupled .dialog-content{
+  height: auto;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+@keyframes gm-expand{
+  from{ transform: scale(.94); }
+  to{ transform: scale(1); }
+}
+
+.gm-pannels-container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.gm-aside-panel{
+  width: var(--width-aside);
+  height: 100%;
+  pointer-events: none;
+  border-radius: 0 12px 12px 0;
+  transition: width .28s cubic-bezier(.2, .8, .2, 1), box-shadow .2s ease, background-color .2s ease, outline-color .2s ease;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.gm-aside-panel.is-dragover{
+  outline-color: #4d90fe;
+  box-shadow: 0 0 0 4px rgba(77, 144, 254, .35), inset 0 0 0 1px rgba(77, 144, 254, .5);
+  background-color: rgba(77, 144, 254, .12);
+}
+
+.gm-aside-panel.is-coupled{
+  /* el panel es solo zona sensora: no crece ni mantiene énfasis final */
+  outline-color: transparent;
+  box-shadow: none;
+  background-color: transparent;
+}
