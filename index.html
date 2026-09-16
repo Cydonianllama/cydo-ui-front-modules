@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI/UX Front — Proyectos</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #0f1115;
+      color: #e8eaf0;
+      min-height: 100vh;
+      padding: 48px 24px;
+    }
+    .wrap { max-width: 1000px; margin: 0 auto; }
+    header h1 { font-size: 2rem; margin-bottom: 8px; }
+    header p { color: #9aa3b2; margin-bottom: 32px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #171b22;
+      border: 1px solid #262c38;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .card:hover { transform: translateY(-3px); border-color: #3b82f6; }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #232a36;
+      color: #9fb3ff;
+      width: fit-content;
+    }
+    .badge.wip { color: #fbbf24; background: #2b2413; }
+    .card h2 { font-size: 1.2rem; }
+    .card p { color: #9aa3b2; font-size: .95rem; line-height: 1.5; flex: 1; }
+    .card .meta { font-size: 12px; color: #6b7689; font-family: monospace; }
+    .actions { display: flex; gap: 10px; margin-top: 8px; }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #3b82f6;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: .9rem;
+      font-weight: 600;
+    }
+    .btn:hover { background: #2563eb; }
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid #343c4e;
+      color: #cbd5e1;
+    }
+    .btn.secondary:hover { border-color: #3b82f6; }
+    footer { margin-top: 40px; color: #6b7689; font-size: .85rem; }
+    code { background: #232a36; padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>UI/UX Front</h1>
+      <p>Índice de maquetas / clones de interfaz del módulo. Abre cada proyecto desde aquí.</p>
+    </header>
+
+    <main class="grid">
+      <article class="card">
+        <span class="badge">HTML + CSS + JS</span>
+        <h2>📅 Google Calendar Composer</h2>
+        <p>Composer de eventos estilo Google Calendar. Layout con aside + contenido, panel de crear / editar evento y paneles acoplados.</p>
+        <div class="meta">./google-calendar-composer/index.html</div>
+        <div class="actions">
+          <a class="btn" href="./google-calendar-composer/index.html">Abrir demo</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="badge">Clon UI</span>
+        <h2>🟣 Twitch — Channel</h2>
+        <p>Clon de página de canal de Twitch: header, sidebar de seguidos / en vivo, info del canal, about y chat con composer.</p>
+        <div class="meta">./twitch/index.html</div>
+        <div class="actions">
+          <a class="btn" href="./twitch/index.html">Abrir demo</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="badge">Clon UI</span>
+        <h2>🐦 Twitter Profile</h2>
+        <p>Clon de perfil de Twitter/X: nav lateral, hero + avatar, info de perfil, tabs (Posts / Respuestas / Repost / Multimedia) y asides.</p>
+        <div class="meta">./twitter-profile/index.html</div>
+        <div class="actions">
+          <a class="btn" href="./twitter-profile/index.html">Abrir demo</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="badge wip">WIP — sin index.html</span>
+        <h2>🧾 UI Logger</h2>
+        <p>Carpeta con asset de referencia. Aún no tiene <code>index.html</code> propio.</p>
+        <div class="meta">./ui-logger/</div>
+        <div class="actions">
+          <a class="btn secondary" href="./ui-logger/">Ver carpeta</a>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      Para desarrollo local puedes servir con <code>npx serve .</code> o abrir este archivo directamente en el navegador.
+    </footer>
+  </div>
+</body>
+</html>
