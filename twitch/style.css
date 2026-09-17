@@ -35,8 +35,8 @@
 
   --bg-background: #1c1c20;
   --app-aside-width: 220px;
-  --app-aside-chat: 260px;
-  --header-height: 60px;
+  --app-aside-chat: 290px;
+  --header-height: 35px;
   --border-header-color: rgb(25, 25, 25);
   --border-chat-color: rgb(63, 63, 63);
   --text-color-background: white;
@@ -106,7 +106,7 @@
 }
 
 .app-aside-title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--text-color-background);
 }
@@ -227,8 +227,8 @@
 
 /* user card */
 .user-card {
-  height: 34px;
-  width: 34px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   background-color: rgb(134, 134, 134);
 }
@@ -288,14 +288,15 @@
 }
 
 .chat-message--name {
-  font-size: 11px;
+  font-size: 12px;
+  letter-spacing: -.2px;
   font-weight: 900;
   display: inline;
 }
 
 .chat-message--message {
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   display: inline;
   word-break: normal;
 }
@@ -303,34 +304,52 @@
 /* composer message */
 .input-composer-message {
   background: transparent;
-  outline: none;
-  border: none;
   width: 100%;
   padding: 10px;
-  border-left: 1px solid var(--border-chat-color);
-  border-right: 1px solid var(--border-chat-color);
-  border-bottom: 1px solid var(--border-chat-color);
-  border-radius: 0 0 5px 5px;
+  border-left: 1px solid rgb(145, 143, 143);
+  border-right: 1px solid rgb(145, 143, 143);
+  border-bottom: 1px solid rgb(145, 143, 143);
+  border-top: 1px solid rgb(145, 143, 143);
+  border-radius: 5px;
   color: white;
+  z-index: 3;
+  position: relative;
+  background-color: var(--bg-background);
+}
+
+.input-composer-message:focus{
+  outline-color: rgb(156, 15, 156) !important;
+  outline-width: 2 !important;
+  outline-offset: 2px;
+  border-color: transparent;
 }
 
 .message-composer-wrapper {
   /* border: 1px solid white; */
+  position: relative;
+  padding-top: 22px;
 }
 
 .message-composer-status {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-weight: 600;
   color: rgb(197, 197, 197);
-  font-size: 12px;
-  background-color: rgb(23, 23, 23);
+  font-size: 11px;
+  background-color: rgb(48, 48, 48);
   border-radius: 5px 5px 0 0;
-  padding: 10px;
+  padding: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   cursor: pointer;
-  border-left: 1px solid rgb(46, 45, 45);
-  border-top: 1px solid rgb(46, 45, 45);
-  border-right: 1px solid rgb(46, 45, 45);
-  border-bottom: 1px solid rgb(46, 45, 45);
+  border-left: 1px solid rgb(81, 80, 80);
+  border-right: 1px solid rgb(81, 80, 80);
+  border-top: 1px solid rgb(81, 80, 80);
+  border-bottom: 1px solid rgb(81, 80, 80);
+  margin-bottom: 1px;
 }
 
 .message-composer-footer {
